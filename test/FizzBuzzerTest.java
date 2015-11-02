@@ -16,7 +16,7 @@ public class FizzBuzzerTest {
     }
 
     @Test
-    public void firstTest(){
-        assertEquals("", fb.generate(-1));
+    public void shouldReturnOne() {
+        assertEquals("1", fb.generate(1));
     }
 }
