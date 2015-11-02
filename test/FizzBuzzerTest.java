@@ -29,4 +29,9 @@ public class FizzBuzzerTest {
     public void shouldReturnFizz() {
         assertEquals("Fizz", fb.generate(3));
     }
+
+    @Test
+    public void shouldReturnBuzz() {
+        assertEquals("Buzz", fb.generate(5));
+    }
 }
