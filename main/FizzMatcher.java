@@ -1,9 +1,9 @@
 package main;
 
-public class FizzMatcher implements Matcher{
+public class FizzMatcher extends Matcher {
     @Override
     public boolean matches(int number) {
-        return number % 3 == 0;
+        return super.isDivisible(number, 3);
     }
 
     @Override

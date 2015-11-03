@@ -20,8 +20,4 @@ public class FizzBuzzer {
         }
         return transformedNumber.isEmpty() ? String.valueOf(number) : transformedNumber;
     }
-
-    private boolean isDivisible(int number, int divisor) {
-        return number % divisor == 0;
-    }
 }

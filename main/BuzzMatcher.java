@@ -1,9 +1,9 @@
 package main;
 
-public class BuzzMatcher implements Matcher{
+public class BuzzMatcher extends Matcher {
     @Override
     public boolean matches(int number) {
-        return number % 5 == 0;
+        return super.isDivisible(number, 5);
     }
 
     @Override
