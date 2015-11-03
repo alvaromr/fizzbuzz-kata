@@ -16,28 +16,32 @@ public class FizzBuzzerTest {
     }
 
     @Test
-    public void shouldReturnOne() {
+    public void shouldReturnNumber() {
         assertEquals("1", fb.generate(1));
-    }
-
-    @Test
-    public void shouldReturnTwo() {
         assertEquals("2", fb.generate(2));
+        assertEquals("56", fb.generate(56));
+        assertEquals("31", fb.generate(31));
     }
 
     @Test
     public void shouldReturnFizz() {
         assertEquals("Fizz", fb.generate(3));
+        assertEquals("Fizz", fb.generate(9));
+        assertEquals("Fizz", fb.generate(51));
     }
 
     @Test
     public void shouldReturnBuzz() {
         assertEquals("Buzz", fb.generate(5));
+        assertEquals("Buzz", fb.generate(25));
+        assertEquals("Buzz", fb.generate(35));
     }
 
     @Test
     public void shouldReturnFizzBuzz() {
         assertEquals("FizzBuzz", fb.generate(15));
+        assertEquals("FizzBuzz", fb.generate(30));
+        assertEquals("FizzBuzz", fb.generate(45));
     }
 
 }
