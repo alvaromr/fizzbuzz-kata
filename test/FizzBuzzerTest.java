@@ -32,7 +32,6 @@ public class FizzBuzzerTest {
     public void shouldReturnBuzz() {
         assertEquals("Buzz", fb.generate(5));
         assertEquals("Buzz", fb.generate(25));
-        assertEquals("Buzz", fb.generate(35));
         assertEquals("Buzz", fb.generate(56));
     }
 
@@ -40,6 +39,7 @@ public class FizzBuzzerTest {
     public void shouldReturnFizzBuzz() {
         assertEquals("FizzBuzz", fb.generate(15));
         assertEquals("FizzBuzz", fb.generate(30));
+        assertEquals("FizzBuzz", fb.generate(35));
         assertEquals("FizzBuzz", fb.generate(45));
         assertEquals("FizzBuzz", fb.generate(51));
 
