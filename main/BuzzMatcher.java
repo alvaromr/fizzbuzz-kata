@@ -1,9 +1,11 @@
 package main;
 
 public class BuzzMatcher extends Matcher {
-    @Override
-    public boolean matches(int number) {
-        return super.isDivisible(number, 5) || super.containsDigit(number, 5);
+
+    private static final int NUMBER_TO_MATCH = 5;
+
+    public BuzzMatcher() {
+        super(NUMBER_TO_MATCH);
     }
 
     @Override

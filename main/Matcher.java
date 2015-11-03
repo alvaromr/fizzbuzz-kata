@@ -1,7 +1,16 @@
 package main;
 
 public abstract class Matcher {
-    public abstract boolean matches(int number);
+
+    private int numberToMatch;
+
+    public Matcher(int numberToMatch) {
+        this.numberToMatch = numberToMatch;
+    }
+
+    public boolean matches(int number){
+        return this.isDivisible(number, numberToMatch) || this.containsDigit(number, numberToMatch);
+    }
 
     public abstract String appendTransformation(int number);
 
