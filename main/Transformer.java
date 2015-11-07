@@ -1,5 +1,5 @@
 package main;
 
-public interface Transformer {
+interface Transformer {
     String transform(String original, int number);
 }

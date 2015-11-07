@@ -12,7 +12,7 @@ For a given number return:
 + Write a method, which, given a number, returns the correct word according to the rules
 + Solve the problem using TDD.
 
-## Chalenges
+## Challenges
 + Try to avoid using if-else chains.
 + Try the extended rules.
 + Try the super extended rules.

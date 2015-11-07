@@ -11,7 +11,7 @@ public class FizzBuzzerTest {
     private FizzBuzzer fb;
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         fb = new FizzBuzzer();
     }
 

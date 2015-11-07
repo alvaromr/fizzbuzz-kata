@@ -2,23 +2,21 @@ package main;
 
 public class WordTransformer implements Transformer {
 
-    private int numberToMatch;
-    private String word;
+    private final Word WORD;
 
-    public WordTransformer(int numberToMatch, String word) {
-        this.numberToMatch = numberToMatch;
-        this.word = word;
+    public WordTransformer(Word word) {
+        this.WORD = word;
     }
 
     public String transform(String original, int number) {
         if (!this.canTransform(number)) {
             return original;
         }
-        return original + this.word;
+        return original + this.WORD.toString();
     }
 
     private boolean canTransform(int number) {
-        return this.isDivisible(number, numberToMatch) || this.containsDigit(number, numberToMatch);
+        return this.isDivisible(number, this.WORD.NUMBER) || this.containsDigit(number, this.WORD.NUMBER);
     }
 
     private boolean isDivisible(int number, int divisor) {
