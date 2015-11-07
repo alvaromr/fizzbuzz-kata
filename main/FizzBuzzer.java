@@ -7,20 +7,20 @@ public class FizzBuzzer {
     public static final int FIZZ_NUMBER = 3;
     public static final int BUZZ_NUMBER = 5;
 
-    private List<Matcher> matchers;
+    private List<Transformer> transformers;
+
     public FizzBuzzer() {
-        matchers = new ArrayList<>();
-        matchers.add(new Matcher(FIZZ_NUMBER, "Fizz"));
-        matchers.add(new Matcher(BUZZ_NUMBER, "Buzz"));
+        transformers = new ArrayList<>();
+        transformers.add(new WordTransformer(FIZZ_NUMBER, "Fizz"));
+        transformers.add(new WordTransformer(BUZZ_NUMBER, "Buzz"));
+        transformers.add(new NumberTransformer());
     }
 
     public String generate(int number) {
         String transformedNumber = "";
-        for(Matcher matcher : matchers){
-            if(matcher.matches(number)){
-                transformedNumber += matcher.appendTransformation();
-            }
+        for (Transformer transformer : transformers) {
+            transformedNumber = transformer.transform(transformedNumber, number);
         }
-        return transformedNumber.isEmpty() ? String.valueOf(number) : transformedNumber;
+        return transformedNumber;
     }
 }
