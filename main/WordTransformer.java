@@ -29,7 +29,7 @@ public class WordTransformer implements Transformer {
         int currentNumber = number;
         int currentDigit = currentNumber % 10;
         boolean found = false;
-        while (currentDigit != 0 && !found) {
+        while (currentNumber != 0 && !found) {
             found = currentDigit == digit;
             currentNumber /= 10;
             currentDigit = currentNumber % 10;
